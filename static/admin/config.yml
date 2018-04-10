@@ -4,6 +4,125 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 collections:
+- label: "Cob Spot Light"
+  name: "cob_spot_light"
+  folder: "content/products/cob_spot_light"
+  filter: {field: "type", value: "products"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - label: Items
+      name: items
+      widget: list
+      fields:
+        - {label: Brand, name: brand, widget: string}
+        - {label: Description, name: description, widget: text}
+- label: "Indoor Comercial"
+  name: "indoor_comercial"
+  folder: "content/products/indoor_comercial"
+  filter: {field: "type", value: "products"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - label: Items
+      name: items
+      widget: list
+      fields:
+        - {label: Brand, name: brand, widget: string}
+        - {label: Description, name: description, widget: text}
+- label: "Indoor Surface"
+  name: "indoor_surface"
+  folder: "content/products/indoor_surface"
+  filter: {field: "type", value: "products"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - label: Items
+      name: items
+      widget: list
+      fields:
+        - {label: Brand, name: brand, widget: string}
+        - {label: Description, name: description, widget: text}
+- label: "Led Bulbs Tube"
+  name: "led_bulbs_tube"
+  folder: "content/products/led_bulbs_tube"
+  filter: {field: "type", value: "products"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - label: Items
+      name: items
+      widget: list
+      fields:
+        - {label: Brand, name: brand, widget: string}
+        - {label: Description, name: description, widget: text}
+- label: "Product Category"
+  name: "product category"
+  files:
+    - label: "Cob Spot Light"
+      name: "cob_spot_light"
+      file: "content/products/cob_spot_light/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "indoor_comercial"
+      name: "indoor_comercial"
+      file: "content/products/indoor_comercial/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Indoor Surface"
+      name: "indoor_surface"
+      file: "content/products/indoor_surface/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Led Bulbs Tube"
+      name: "led_bulbs_tube"
+      file: "content/products/led_bulbs_tube/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
 - label: "Pages"
   name:  "pages"
   files:
@@ -23,6 +142,15 @@ collections:
             - {label: Title, name: title, widget: string}
             - {label: Description, name: description, widget: text}
             - {label: Link, name: link, widget: string}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Product"
+      name: "product"
+      file: "content/products/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
         - {label: Content, name: body, widget: markdown}
     - label: "About"
       name: "about"
