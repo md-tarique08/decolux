@@ -1,0 +1,4 @@
+baseURL = "https://decolux.netlify.com/"
+languageCode = "en-us"
+title = "Decolux"
+theme = "sm-decolux"

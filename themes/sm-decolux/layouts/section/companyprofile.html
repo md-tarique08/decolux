@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+<link href='{{ "dist/bb.min.css" | absURL}}' rel="stylesheet"/>
+<script type="text/javascript" src='{{ "dist/bb.min.js" | absURL}}'></script>
+<div class="ph3 ph4-m ph5-l flex items-stretch items-start pb5">
+      <main class="pr4-l w-100 w-60-l">
+        <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+          <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}') " ></div>
+        </div>
+        <div class="content mb5">
+          {{ .Content }}
+        </div>
+      </main>
+  </div>
+<!-- {{ partial "footer-brand.html" . }} -->
+{{ partial "footer.html" . }}
+
+<script>
+ baguetteBox.run('.gallery');
+</script>
+
